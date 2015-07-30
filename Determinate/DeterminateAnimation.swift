@@ -11,12 +11,14 @@ import Cocoa
 
 protocol Determinable {
     func updateProgress()
+    func progressComplete()
 }
 
 @IBDesignable
 class DeterminateAnimation: NSView, Determinable {
     
     @IBInspectable var animated: Bool = true
+    @IBInspectable var removeOnComplete: Bool = true
 
     /// Value of progress now. Range 0..1
     @IBInspectable var progress: CGFloat = 0 {
@@ -27,6 +29,15 @@ class DeterminateAnimation: NSView, Determinable {
 
     /// This function will only be called by didSet of progress. Every subclass will have its own implementation
     func updateProgress() {
-        fatalError("Must be overriden in subclass")
+        
+        if progress < 1.0 {
+            if self.hidden { self.hidden = false }
+        } else {
+            self.hidden = true
+        }
+    }
+    
+    func progressComplete() {
+        fatalError("To be implemented in sub class")
     }
 }

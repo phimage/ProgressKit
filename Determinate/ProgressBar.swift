@@ -94,6 +94,7 @@ class ProgressBar: DeterminateAnimation {
     }
     
     override func updateProgress() {
+        super.updateProgress()
         CATransaction.begin()
         if animated {
             CATransaction.setAnimationDuration(0.5)

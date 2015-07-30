@@ -1360,6 +1360,9 @@ Disabled</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </customView>
+                            <progressIndicator fixedFrame="YES" maxValue="100" doubleValue="20" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="TGW-qa-pDT">
+                                <rect key="frame" x="75" y="149" width="394" height="20"/>
+                            </progressIndicator>
                         </subviews>
                     </view>
                     <connections>
