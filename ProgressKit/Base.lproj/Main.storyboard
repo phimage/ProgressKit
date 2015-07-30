@@ -1329,7 +1329,36 @@ Disabled</string>
                                 </connections>
                             </textField>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejA-gs-jO8" customClass="ProgressBar" customModule="ProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="48" y="305" width="416" height="15"/>
+                                <rect key="frame" x="20" y="294" width="416" height="25"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderOffset">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.21176470588235294" green="0.41176470588235292" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d2u-Yg-Wml" customClass="ProgressBar" customModule="ProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="20" y="260" width="436" height="12"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                        <color key="value" red="0.12549020349979401" green="0.56078433990478516" blue="0.54117649793624878" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showPercent" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderOffset">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </customView>
                         </subviews>
                     </view>
@@ -1340,6 +1369,7 @@ Disabled</string>
                         <outlet property="circularView4" destination="LGf-cu-fkt" id="9uW-uU-c8y"/>
                         <outlet property="circularView5" destination="SNI-Pe-z5Z" id="bwL-vu-uUy"/>
                         <outlet property="progressBar1" destination="ejA-gs-jO8" id="tvB-Pi-yaR"/>
+                        <outlet property="progressBar2" destination="d2u-Yg-Wml" id="i0X-o0-xna"/>
                         <outlet property="slider" destination="vwx-DU-bI3" id="esn-lC-yUN"/>
                     </connections>
                 </viewController>
