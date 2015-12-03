@@ -12,7 +12,7 @@ import Cocoa
 @IBDesignable
 public class Rainbow: CircularSnail {
 
-    @IBInspectable var onLightOffDark: Bool = false
+    @IBInspectable public var onLightOffDark: Bool = false
 
     override func configureLayers() {
         super.configureLayers()
@@ -22,8 +22,7 @@ public class Rainbow: CircularSnail {
     override public func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         super.animationDidStop(anim, finished: flag)
         if onLightOffDark {
-           progressLayer.strokeColor = lightColorList[Int(arc4random()) % lightColorList.count].CGColor
-
+            progressLayer.strokeColor = lightColorList[Int(arc4random()) % lightColorList.count].CGColor
         } else {
             progressLayer.strokeColor = darkColorList[Int(arc4random()) % darkColorList.count].CGColor
         }

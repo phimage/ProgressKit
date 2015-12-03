@@ -1,16 +1,25 @@
 
-![Image](/Images/banner.gif)
+![ProgressKit Banner](/Images/banner.gif)
+
+[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/ProgressKit.svg)](https://img.shields.io/cocoapods/v/ProgressKit.svg)
+[![Platform](https://img.shields.io/cocoapods/p/ProgressKit.svg?style=flat)](http://cocoadocs.org/docsets/ProgressKit)
+[![License](https://img.shields.io/cocoapods/l/ProgressKit.svg?style=flat)](http://cocoadocs.org/docsets/ProgressKit)
+
+
 
 `ProgressKit` has set of cool `IBDesignable` progress views, with huge customisation options. 
-You can now make spinners, progress bar, crawlers etc, which nicely gets integrated according to your app theme.
+You can now make spinners, progress bar, crawlers etc, which can be finely customised according to your app palette.
 
 # Contents
 - [Installation](#installation)
 - [Usage](#usage)
 - [Indeterminate Progress](#indeterminate-progress)
   - [CircularSnail](#circularsnail)
+  - [Rainbow](#rainbow)
   - [Crawler](#crawler)
   - [Spinner](#spinner)
+  - [Shooting Stars](#shooting-stars)
+  - [Rotating Arc](#rotating-arc)
 - [Determinate Progress](#determinate-progress)
   - [Circular Progress] (#circular-progress)
   - [Progress Bar](#progress-bar)
@@ -40,7 +49,7 @@ $ pod install
 - Set the size such that width and height are equal
 - Drag `IBOutlet` to View Controller
 - For `Indeterminate` Progress Views
-  - Set `Boolean` value to `view.animate`
+  - Set `true / false` to `view.animate`
 - For `Determinate` Progress Views:
   - Set `view.progress` to value in `0...1`
   
@@ -55,11 +64,19 @@ This are the set of Indeterminate Progress Indicators.
 ## CircularSnail
 ![CircularSnail](/Images/CircularSnail.gif)
 
+## Rainbow
+![Rainbow](/Images/Rainbow.gif)
 ## Crawler
 ![Crawler](/Images/Crawler.gif)
 
 ## Spinner
 ![Spinner](/Images/Spinner.gif)
+
+## Shooting Stars
+![Shooting Stars](/Images/ShootingStars.gif)
+
+## Rotating Arc
+![Rotating Arc](/Images/RotatingArc.gif)
 
 # Determinate Progress
 Determinate progress views can be used for tasks whos progress can be seen and determined.

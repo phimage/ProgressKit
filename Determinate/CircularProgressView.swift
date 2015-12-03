@@ -16,13 +16,13 @@ public class CircularProgressView: DeterminateAnimation {
     var progressLayer = CAShapeLayer()
     var percentLabelLayer = CATextLayer()
 
-    @IBInspectable var strokeWidth: CGFloat = -1 {
+    @IBInspectable public var strokeWidth: CGFloat = -1 {
         didSet {
             notifyViewRedesigned()
         }
     }
     
-    @IBInspectable var showPercent: Bool = true {
+    @IBInspectable public var showPercent: Bool = true {
         didSet {
             notifyViewRedesigned()
         }
@@ -61,7 +61,7 @@ public class CircularProgressView: DeterminateAnimation {
         
 
         // Add background Circle
-        do_ {
+        do {
             backgroundCircle.frame = rect
             backgroundCircle.lineWidth = strokeWidth == -1 ? (rect.width * strokeScalingFactor / 2) : strokeWidth / 2
             
@@ -74,7 +74,7 @@ public class CircularProgressView: DeterminateAnimation {
         }
         
         // Progress Layer
-        do_ {
+        do {
             progressLayer.strokeEnd = 0 //REMOVe this
             progressLayer.fillColor = NSColor.clearColor().CGColor
             progressLayer.lineCap = kCALineCapRound
@@ -90,7 +90,7 @@ public class CircularProgressView: DeterminateAnimation {
         }
 
         // Percentage Layer
-        do_ {
+        do {
             percentLabelLayer.string = "0%"
             percentLabelLayer.foregroundColor = foreground.CGColor
             percentLabelLayer.frame = rect
